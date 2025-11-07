@@ -1,92 +1,111 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
-  const inputVal = document.querySelector("#input-value");
-  const guessedNum = document.querySelector("#guessed-number");
-  const leftTries = document.querySelector("#tries");
-  const alerts = document.querySelector(".alerts");
-  const btn = document.querySelector("#sub-btn");
-  const newBtn = document.createElement("button");
-  const container = document.querySelector(".container");
+    const form = document.querySelector("form");
+    const inputEl = document.querySelector("#input-value");
+    const guessesEl = document.querySelector("#guessed-number");
+    const triesEl = document.querySelector("#tries");
+    const alerts = document.querySelector(".alerts");
+    const submitBtn = document.querySelector("#sub-btn");
+    const container = document.querySelector(".container");
 
-  let gameFinish = false;
-  let guessedNumArray = [];
-  let totalTries = 10;
-  let guess = Math.floor(Math.random() * 100) + 1;
+    const resetBtn = document.createElement("button");
+    resetBtn.id = "reset-btn";
+    resetBtn.textContent = "Reset";
 
+    let gameFinished = false;
+    let guesses = [];
+    let triesLeft = 10;
+    let secretNumber = Math.floor(Math.random() * 101); // 0–100
 
-  const guessDisplay = (array) => {
-    guessedNum.textContent = array.join(", ");
-  };
+    let alertTimeoutId = null;
 
-  const clearAlert = () => {
-    setTimeout(() => {
-      alerts.textContent = "";
-    }, 700);
-  };
+    const updateGuessesDisplay = () => {
+        guessesEl.textContent = guesses.join(", ");
+    };
 
-  const inputChecker = (input) => {
-    totalTries--;
-    leftTries.textContent = totalTries;
-    guessedNumArray.push(input);
-    guessDisplay(guessedNumArray);
+    const showAlert = (message, autoClear = true) => {
+        alerts.textContent = message;
+        if (!autoClear) return;
 
-    if (input === guess) {
-      alerts.textContent = "🎉 You guessed it right!";
-      gameEnd();
-    } else if (input > guess) {
-      alerts.textContent = "🚀 Too high. Try again!";
-      clearAlert();
-    } else {
-      alerts.textContent = "🚩 Too low. Try again!";
-      clearAlert();
-    }
-  };
+        if (alertTimeoutId) clearTimeout(alertTimeoutId);
+        alertTimeoutId = setTimeout(() => {
+            alerts.textContent = "";
+            alertTimeoutId = null;
+        }, 1500);
+    };
 
-  const resetGame = () => {
-    gameFinish = false;
-    guessedNumArray = [];
-    totalTries = 10;
-    guess = Math.floor(Math.random() * 100) + 1;
+    const endGame = (message) => {
+        gameFinished = true;
+        inputEl.disabled = true;
+        submitBtn.disabled = true;
+        submitBtn.style.cursor = "not-allowed";
+        if (message) alerts.textContent = message;
 
-    guessedNum.textContent = "";
-    leftTries.textContent = totalTries;
-    alerts.textContent = "";
-    inputVal.disabled = false;
-    inputVal.value = "";
-    btn.style.cursor = "pointer";
-    newBtn.remove();
+        if (!resetBtn.isConnected) {
+            container.appendChild(resetBtn);
+            resetBtn.addEventListener("click", resetGame);
+        }
+    };
 
-  };
+    const resetGame = () => {
+        gameFinished = false;
+        guesses = [];
+        triesLeft = 10;
+        secretNumber = Math.floor(Math.random() * 101);
 
-  const gameEnd = () => {
-    gameFinish = true;
-    inputVal.disabled = true;
-    btn.style.cursor = "not-allowed";
-    newBtn.textContent = "Reset";
-    newBtn.id = "reset-btn";
-    container.appendChild(newBtn);
-    newBtn.addEventListener("click", resetGame);
-  };
+        guessesEl.textContent = "";
+        triesEl.textContent = triesLeft;
+        alerts.textContent = "";
+        inputEl.disabled = false;
+        submitBtn.disabled = false;
+        inputEl.value = "";
+        submitBtn.style.cursor = "pointer";
 
-  const startGame = () => {
-    const input = parseInt(inputVal.value, 10);
-    inputVal.value = "";
+        if (resetBtn.isConnected) {
+            resetBtn.remove();
+        }
+    };
 
-    if (isNaN(input)) {
-      alerts.textContent = "⚠️ Please enter a valid number!";
-      clearAlert();
-      return;
-    }
+    const handleGuess = (value) => {
+        if (value < 0 || value > 100) {
+            showAlert("⚠️ Enter a number between 0 and 100.");
+            return;
+        }
 
-    if (totalTries > 0 && !gameFinish) {
-      inputChecker(input);
-    } else {
-      gameEnd();
-    }
-  };
+        triesLeft--;
+        triesEl.textContent = triesLeft;
+        guesses.push(value);
+        updateGuessesDisplay();
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    startGame();
-  });
+        if (value === secretNumber) {
+            endGame("🎉 You guessed it right!");
+            return;
+        }
+
+        if (triesLeft === 0) {
+            endGame(`❌ No tries left! The number was ${secretNumber}.`);
+            return;
+        }
+
+        if (value > secretNumber) {
+            showAlert("🚀 Too high. Try again!");
+        } else {
+            showAlert("🚩 Too low. Try again!");
+        }
+    };
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (gameFinished) return;
+
+        const input = parseInt(inputEl.value, 10);
+        inputEl.value = "";
+
+        if (isNaN(input)) {
+            showAlert("⚠️ Please enter a valid number!");
+            return;
+        }
+
+        handleGuess(input);
+    });
 });
