@@ -1,37 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const text = document.querySelector("span");
-  const colorChanger = document.querySelector(".key-container");
-  const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const letterEl = document.querySelector(".key-letter");
+    const keyContainer = document.querySelector(".key-container");
 
-  const letterChose = () => {
-    let index = Math.floor(Math.random() * 26);
-    text.textContent = alphabets[index];
-  };
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const DEFAULT_BG = "#313131";
+    const CORRECT_BG = "darkgreen";
+    const WRONG_BG = "red";
 
-  const backgroundChanger = (boleanVal) => {
-    if (boleanVal === true) {
-      colorChanger.style.backgroundColor = "darkgreen";
-      setTimeout(() => {
-        colorChanger.style.backgroundColor = "#313131"; // back to default
-      }, 500);
-    }
+    let flashTimeoutId = null;
 
-    if (boleanVal === false) {
-      colorChanger.style.backgroundColor = "red";
-      setTimeout(() => {
-        colorChanger.style.backgroundColor = "#313131"; // back to default
-      }, 500);
-    }
-  };
+    const chooseLetter = () => {
+        const index = Math.floor(Math.random() * alphabet.length);
+        letterEl.textContent = alphabet[index];
+    };
 
-  document.addEventListener("keydown", (e) => {
-    let inputKey = e.key.toUpperCase();
-    let keyToBeMatch = text.textContent;
-    if (inputKey == keyToBeMatch) {
-      backgroundChanger(true);
-      letterChose();
-    } else {
-      backgroundChanger(false);
-    }
-  });
+    const flashBackground = (isCorrect) => {
+        // Clear previous timeout so multiple fast keypresses don't fight each other
+        if (flashTimeoutId) {
+            clearTimeout(flashTimeoutId);
+            flashTimeoutId = null;
+        }
+
+        keyContainer.style.backgroundColor = isCorrect ? CORRECT_BG : WRONG_BG;
+
+        flashTimeoutId = setTimeout(() => {
+            keyContainer.style.backgroundColor = DEFAULT_BG;
+            flashTimeoutId = null;
+        }, 500);
+    };
+
+    document.addEventListener("keydown", (event) => {
+        const key = event.key.toUpperCase();
+
+        // Ignore keys that are not A–Z
+        if (!alphabet.includes(key)) return;
+
+        const currentLetter = letterEl.textContent;
+
+        if (key === currentLetter) {
+            flashBackground(true);
+            chooseLetter();
+        } else {
+            flashBackground(false);
+        }
+    });
+
+    // Initialize with a random letter
+    chooseLetter();
 });
