@@ -77,12 +77,6 @@ A number guessing game where the computer picks a number between **1–100** and
 -   Reset button after win/loss
 -   Dynamic feedback for high/low guesses
 
-**Future Improvements:**
-
--   Range validation for inputs
--   Persisting best score using `localStorage`
--   Add difficulty levels
-
 ---
 
 ### 5. Roll Dice Game
