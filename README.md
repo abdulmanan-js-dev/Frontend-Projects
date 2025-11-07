@@ -1,6 +1,6 @@
 # Frontend Projects
 
-A collection of small frontend projects I’m building while practicing HTML, CSS, and JavaScript.  
+A collection of small frontend projects I’m building while practicing **HTML**, **CSS**, and **JavaScript**.  
 Each project lives in its own folder inside this repository.
 
 ---
@@ -20,7 +20,9 @@ You have limited time to click the mole and score as many points as possible.
 -   Random mole movement across nine holes
 -   Countdown timer
 -   Score tracking
--   Start button with disabled state during the game
+-   Start button with disabled state during gameplay
+
+---
 
 ### 2. Color Changer
 
@@ -28,19 +30,106 @@ You have limited time to click the mole and score as many points as possible.
 **Tech:** HTML, CSS, JavaScript (DOM, event delegation)
 
 A simple UI that lets the user change the page background by clicking on color tiles.  
-There are two color palettes:
-
--   **Dark palette** – deep, rich colors (midnight blue, charcoal, burgundy, etc.)
--   **Light palette** – soft, pastel colors (ivory, sky blue, peach, lavender, etc.)
-
-When the user clicks a color:
-
--   The **`<body>` background color** changes to the selected color.
--   The heading text color automatically switches to **dark or light** for better contrast depending on whether the chosen color is from the dark or light palette.
+It includes both **dark** and **light** palettes, and text color adjusts automatically for contrast.
 
 **Features:**
 
--   Config-driven color mapping using a `COLORS` object in JavaScript
--   Buttons styled dynamically based on their `data-color-key` attribute
--   Event delegation on the palette wrapper instead of individual listeners
--   Basic responsive layout for smaller screens
+-   Config-driven color mapping using a `COLORS` object
+-   Buttons styled dynamically with `data-color-key`
+-   Event delegation on the wrapper
+-   Responsive layout for small screens
+
+---
+
+### 3. Key Matcher
+
+**Folder:** `key-matcher`  
+**Tech:** HTML, CSS, JavaScript (DOM events, randomization)
+
+A mini reflex game: a random alphabet is displayed on screen, and you must press the matching key on your keyboard.  
+Correct key flashes **green**, incorrect key flashes **red**.
+
+**Features:**
+
+-   Random letter generation (A–Z)
+-   Real-time key matching
+-   Visual feedback on success/failure
+-   Smooth background color transition
+
+**Future Improvements:**
+
+-   Accessibility (focus styles, ARIA labels)
+-   Configurable speed and key range
+
+---
+
+### 4. Guess a Number
+
+**Folder:** `guess-number`  
+**Tech:** HTML, CSS, JavaScript (forms, DOM manipulation)
+
+A number guessing game where the computer picks a number between **1–100** and you have **10 tries** to guess it.
+
+**Features:**
+
+-   Input validation and feedback messages
+-   Countdown of remaining tries
+-   Reset button after win/loss
+-   Dynamic feedback for high/low guesses
+
+**Future Improvements:**
+
+-   Range validation for inputs
+-   Persisting best score using `localStorage`
+-   Add difficulty levels
+
+---
+
+### 5. Roll Dice Game
+
+**Folder:** `roll-dice-game`  
+**Tech:** HTML, CSS, JavaScript (randomization, UI interaction)
+
+Two players roll virtual dice — the higher number wins.  
+Buttons disable after rolling to prevent re-rolls until reset.
+
+**Features:**
+
+-   Random dice rolls for both players
+-   Simple win/tie message display
+-   Button disable logic to lock turns
+
+**Future Improvements:**
+
+-   Add reset button
+-   Animated dice rolls
+-   Round tracking and score persistence
+
+---
+
+## 🧠 Lessons Learned
+
+-   DOM manipulation and event listeners are powerful but can get messy — small helpers and modular thinking go a long way.
+-   Consistency in naming (`camelCase` for JS, `kebab-case` for CSS classes) improves readability.
+-   Avoid “magic values” — declare constants for reusability.
+-   Always validate input and handle edge cases before processing logic.
+
+---
+
+## ⚙️ Tech Stack
+
+-   **HTML5**
+-   **CSS3 (Flexbox, Grid)**
+-   **Vanilla JavaScript (DOM, Events, Timers)**
+-   No frameworks — pure practice for mastering the fundamentals.
+
+---
+
+## 🚀 How to Run
+
+Clone the repo, then open any project folder and launch `index.html` in your browser.
+
+```bash
+git clone https://github.com/<your-username>/frontend-projects.git
+cd frontend-projects
+```

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess a number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the Number!</h1>
+        <p>I'm thinking of a number between 0 and 100.</p>
+        <p>You have <span id="tries">10</span> tries.</p>
+        <form>
+            <input id="input-value" min="0" max="100" type="number">
+            <button id="sub-btn" type="submit">Submit</button>
+        </form>
+        <p>You entered: <span id="guessed-number"></span></p>
+        <div class="alerts"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
