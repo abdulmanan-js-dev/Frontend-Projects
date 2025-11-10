@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+        <title>BMI Calculator</title>
+    </head>
+    <body
+        class="bg-black text-white h-screen flex justify-center items-center font-sans"
+    >
+        <main
+            id="wrapper"
+            class="border-2 border-white min-h-64 min-w-[440px] rounded-2xl flex justify-start items-center flex-col"
+        >
+            <h1 class="text-3xl font-bold my-2">BMI Calculator</h1>
+
+            <section id="form-section">
+                <form id="bmi-form" class="flex flex-col gap-2 items-center">
+                    <label for="weight-input" class="sr-only"
+                        >Enter your weight</label
+                    >
+                    <input
+                        type="number"
+                        placeholder="Enter your weight in (KG)"
+                        name="weight"
+                        id="weight-input"
+                        class="inp-style"
+                    />
+                    <label for="height-input" class="sr-only"
+                        >Enter your height</label
+                    >
+                    <input
+                        type="number"
+                        placeholder="Enter your height in (CM)"
+                        name="height"
+                        id="height-input"
+                        class="inp-style"
+                    />
+                    <button
+                        class="border-2 px-2 py-1 rounded-xl cursor-pointer font-bold bg-[#414141]"
+                        type="submit"
+                    >
+                        Calculate
+                    </button>
+                </form>
+            </section>
+
+            <section id="result-section">
+                <div
+                    id="result-message"
+                    aria-live="polite"
+                    aria-label="BMI Result"
+                    class="m-4 font-bold text-center"
+                ></div>
+                <div aria-label="BMI Classification Chart">
+                    <table
+                        class="w-full border-2 border-gray-300 border-collapse mb-4 text-sm"
+                    >
+                        <thead class="bg-gray-100 text-black">
+                            <tr>
+                                <th
+                                    class="border border-gray-300 px-4 py-2 text-left font-semibold"
+                                >
+                                    Classification
+                                </th>
+                                <th
+                                    class="border border-gray-300 px-4 py-2 text-left font-semibold"
+                                >
+                                    BMI Range
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-style">Severe Thinness</td>
+                                <td class="td-style">&lt; 16</td>
+                            </tr>
+                            <tr>
+                                <td class="td-style">Moderate Thinness</td>
+                                <td class="td-style">16 - 17</td>
+                            </tr>
+                            <tr>
+                                <td class="td-style">Mild Thinness</td>
+                                <td class="td-style">17 - 18.5</td>
+                            </tr>
+                            <tr>
+                                <td class="td-style">Normal</td>
+                                <td class="td-style">18.5 - 25</td>
+                            </tr>
+                            <tr>
+                                <td class="td-style">Overweight</td>
+                                <td class="td-style">25 - 30</td>
+                            </tr>
+                            <tr>
+                                <td class="td-style">Obese Class I</td>
+                                <td class="td-style">30 - 35</td>
+                            </tr>
+                            <tr>
+                                <td class="td-style">Obese Class II</td>
+                                <td class="td-style">35 - 40</td>
+                            </tr>
+                            <tr>
+                                <td class="td-style">Obese Class III</td>
+                                <td class="td-style">&gt; 40</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
