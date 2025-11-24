@@ -446,4 +446,4 @@ If this repository helped you or you like the projects:
 -   🍴 Fork it and build your own versions
 -   📨 Reach out for collaboration or feedback
 
-Thank you for checking out my Vanilla JavaScript mini projects!
+Thank you for checking out my Frontend Projects!
