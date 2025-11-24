@@ -16,6 +16,7 @@ Each project focuses on DOM manipulation, user interaction, accessibility, and c
 7. **Roll Dice Game** – Two-player dice roll with winner detection.
 8. **Whack-a-Mole** – Timed clicking game where moles appear randomly in a 3×3 grid.
 9. **Calculator** - A fully modular, vanilla JavaScript calculator built without using `eval()`.
+10. **Scroll like Next.js** - The indicator shows the user's scroll progress at the top of the page — commonly seen in blogs, documentation sites, and long-content websites.
 
 ---
 
@@ -244,7 +245,7 @@ This calculator separates **UI, input validation, arithmetic operations, and eva
 
 ---
 
-## 🚀 Features
+### 🚀 Features
 
 -   Basic arithmetic: `+`, `-`, `*`, `/`, `%`
 -   Multi-digit and decimal numbers
@@ -327,6 +328,7 @@ User clicks:
 1 → 2 → + → 3 → =
 ```
 ````
+
 Processing:
 
 1. **app.js** collects entries → `['1', '2', '+', '3']`
@@ -336,7 +338,7 @@ Processing:
 
 ---
 
-## 🖥️ How to Run
+### 🖥️ How to Run
 
 1. Make sure your project files are structured as shown above.
 2. Open `index.html` in any modern browser.
@@ -346,6 +348,69 @@ Processing:
 ```html
 <script type="module" src="app.js"></script>
 ```
+
+---
+
+## 📜 10. Scroll like Next.js
+
+This project demonstrates a simple *#*Scroll like Next.js\*\* using HTML, CSS, and JavaScript.  
+The indicator shows the user's scroll progress at the top of the page — commonly seen in blogs, documentation sites, and long-content websites.
+
+### 📌 Features
+
+-   A thin progress bar at the top of the page that fills as the user scrolls.
+-   Smooth progress animation.
+-   Works on all screen sizes.
+-   Simple and lightweight (no libraries required).
+
+### 📂 Project Structure
+
+```
+project-folder/
+│
+├── index.html      # Main HTML structure
+├── style.css       # Styles for layout and progress bar
+└── script.js       # Logic to update progress bar on scroll
+```
+
+### 🧱 How It Works
+
+#### 1. HTML
+
+-   Contains a `#progress-bar` div at the top.
+-   Multiple `<section>` elements with large paragraphs to create scrollable content.
+
+#### 2. CSS
+
+-   `#progress-bar` is positioned at the top using `position: fixed;`.
+-   Width of the bar changes dynamically based on scroll position.
+
+#### 3. JavaScript
+
+-   Calculates scroll percentage using:
+
+```
+scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
+```
+
+-   Updates the progress bar width:
+
+```js
+progressBar.style.width = scrolled + "%";
+```
+
+### ▶️ Usage
+
+1. Download or clone the repo.
+2. Open `index.html` in a browser.
+3. Scroll the page to see the scroll indicator update.
+
+### 💡 Notes
+
+-   Customize the progress bar color or thickness in `style.css`.
+-   Useful for blogs, documentation, and long article pages.
+
+---
 
 ## 🗂️ Projects Structure
 
@@ -361,6 +426,7 @@ Processing:
 ├── 07. roll-dice-game/
 └── 08. whack-a-mole/
 └── 09. calculator/
+└── 10. scroll-like-Next.js/
 
 ```
 
