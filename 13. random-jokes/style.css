@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#jokes-display {
+    border: 2px solid #fff;
+    max-width: 30rem;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin: 0.8rem;
+    font-size: larger;
+    font-weight: 500;
+}
+
+#get-jokes-btn {
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: yellowgreen;
+    transition: all 0.6s ease;
+}
+
+#get-jokes-btn:hover {
+    background-color: rgb(94, 119, 43);
+    color: white;
+}
