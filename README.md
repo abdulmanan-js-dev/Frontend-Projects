@@ -1,6 +1,6 @@
 # 🧩 Vanilla JavaScript Mini Projects
 
-A collection of **8 beginner-friendly frontend projects** built using **HTML**, **CSS**, and **Vanilla JavaScript**.  
+A collection of **beginner-friendly frontend projects** built using **HTML**, **CSS**, and **Vanilla JavaScript**.  
 Each project focuses on DOM manipulation, user interaction, accessibility, and clean UI design.
 
 ---
@@ -17,6 +17,7 @@ Each project focuses on DOM manipulation, user interaction, accessibility, and c
 8. **Whack-a-Mole** – Timed clicking game where moles appear randomly in a 3×3 grid.
 9. **Calculator** - A fully modular, vanilla JavaScript calculator built without using `eval()`.
 10. **Scroll like Next.js** - The indicator shows the user's scroll progress at the top of the page — commonly seen in blogs, documentation sites, and long-content websites.
+11. "Mouse Circle" - An interactive project where users can click anywhere on the screen to create animated circles that appear, grow, and fade out.
 
 ---
 
@@ -412,6 +413,43 @@ progressBar.style.width = scrolled + "%";
 
 ---
 
+## 🖱️ 11. Mouse Circle
+
+An interactive project where users can click anywhere on the screen to create animated circles that appear, grow, and fade out.
+
+### 📌 Features
+
+-   Creates a circle at the click position
+-   Smooth grow and fade-out animation
+-   Random colors for each circle
+-   Circles do not block clicks
+-   Lightweight and easy to extend
+
+### 🧩 Tech Stack
+
+-   HTML5
+-   CSS3
+-   Vanilla JavaScript (ES6)
+
+### 📂 Project Structure
+
+```
+11. mouse-circle/
+│
+├── index.html # Main HTML structure
+├── style.css # Styles for body, circle, and animation
+└── script.js # Logic to create and animate circles on click
+
+```
+
+### 🧱 How It Works
+
+1. HTML contains a <p> instruction.
+2. CSS styles the circle and adds transition effects.
+3. JavaScript listens for `click` events, creates a `<div>` at the mouse position, assigns a random color, triggers the grow/fade animation, and removes the circle after animation completes.
+
+---
+
 ## 🗂️ Projects Structure
 
 ```
@@ -427,6 +465,7 @@ progressBar.style.width = scrolled + "%";
 └── 08. whack-a-mole/
 └── 09. calculator/
 └── 10. scroll-like-Next.js/
+└── 11. mouse-circle/
 
 ```
 
