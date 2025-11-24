@@ -1,23 +1,34 @@
 # 🧩 Vanilla JavaScript Mini Projects
 
-A collection of **beginner-friendly frontend projects** built using **HTML**, **CSS**, and **Vanilla JavaScript**.  
-Each project focuses on DOM manipulation, user interaction, accessibility, and clean UI design.
+[![GitHub Stars](https://img.shields.io/github/stars/abdulmanan-js-dev/Frontend-Projects?style=flat&color=yellow)](https://github.com/abdulmanan-js-dev/Frontend-Projects)
+[![GitHub Forks](https://img.shields.io/github/forks/abdulmanan-js-dev/Frontend-Projects?style=flat&color=blue)](https://github.com/abdulmanan-js-dev/Frontend-Projects/fork)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Made With](https://img.shields.io/badge/Made%20with-JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+A collection of **clean, modern, and beginner-friendly frontend projects** built using **HTML**, **CSS**, and **Vanilla JavaScript**.  
+This repository highlights my understanding of **DOM manipulation**, **browser events**, **modular JavaScript**, and **frontend UI/UX fundamentals**.
+
+Each project is intentionally small, focused, and written with clarity—ideal for portfolio use, interviews, or practicing core frontend concepts.
 
 ---
 
-## 📋 Projects Overview
+## 📌 Project Showcase
 
-1. **BMI Calculator** – Calculate Body Mass Index from weight and height, with a BMI classification table.
-2. **Color Changer** – Change the page background by clicking color tiles, with automatic text contrast adjustment.
-3. **Digital Clock** – Live digital clock showing time, date, and day of the week.
-4. **Guess Number** – Number guessing game with limited tries and feedback (too high / too low).
-5. **Key Matcher** – Keyboard reflex game: press the key that matches the random letter shown.
-6. **Rock-Paper-Scissors** – Classic game versus the computer with result display.
-7. **Roll Dice Game** – Two-player dice roll with winner detection.
-8. **Whack-a-Mole** – Timed clicking game where moles appear randomly in a 3×3 grid.
-9. **Calculator** - A fully modular, vanilla JavaScript calculator built without using `eval()`.
-10. **Scroll like Next.js** - The indicator shows the user's scroll progress at the top of the page — commonly seen in blogs, documentation sites, and long-content websites.
-11. "Mouse Circle" - An interactive project where users can click anywhere on the screen to create animated circles that appear, grow, and fade out.
+| #   | Project Name                     | Description                                             |
+| --- | -------------------------------- | ------------------------------------------------------- |
+| 01  | BMI Calculator                   | Health-focused BMI calculator with classification table |
+| 02  | Color Changer                    | Interactive background color switcher                   |
+| 03  | Digital Clock                    | Live clock with date and weekday                        |
+| 04  | Guess Number                     | Number guessing game with hints and attempts            |
+| 05  | Key Matcher                      | Keyboard reflex / typing accuracy game                  |
+| 06  | Rock-Paper-Scissors              | Classic RPS vs computer with emoji UI                   |
+| 07  | Roll Dice Game                   | Two-player dice roll with winner detection              |
+| 08  | Whack-a-Mole                     | Timed 3×3 grid click game                               |
+| 09  | Modular JavaScript Calculator    | ES Modules-based calculator without `eval()`            |
+| 10  | Scroll Indicator (Next.js Style) | Scroll progress bar at the top of the page              |
+| 11  | Mouse Circle                     | Click-to-spawn animated, fading circles                 |
+| 12  | Random Emoji Generator           | Hover to cycle through random emojis with transitions   |
 
 ---
 
@@ -25,13 +36,13 @@ Each project focuses on DOM manipulation, user interaction, accessibility, and c
 
 A simple Body Mass Index calculator that lets users enter their weight and height to compute their BMI and check their health classification.
 
-### 🚀 Features
+### ✨ Features
 
 -   Input for **weight (kg)** and **height (cm)**
 -   Calculates BMI and displays result to two decimal places
--   Static BMI classification chart
--   Clean, responsive card layout
--   Accessible design with ARIA attributes
+-   Static BMI classification chart for easy interpretation
+-   Clean, responsive card-style layout
+-   Accessible form with labels and ARIA attributes
 
 ### 🧩 Tech Stack
 
@@ -39,7 +50,7 @@ A simple Body Mass Index calculator that lets users enter their weight and heigh
 -   **Tailwind CSS**
 -   **Vanilla JavaScript (ES6)**
 
-### ⚙️ How to Run
+### ▶️ How to Run
 
 ```bash
 cd 01. bmi-calculator
@@ -50,15 +61,15 @@ open index.html
 
 ## 🎨 2. Color Changer
 
-An interactive web app that changes the background color based on the tile you click. The text color adjusts automatically for visibility.
+An interactive web app that changes the page background based on the color tile you click. The text color adjusts automatically for readability.
 
-### 🚀 Features
+### ✨ Features
 
--   Multiple color palettes (dark & light)
--   Dynamic background updates
--   Auto text contrast switching
--   Event delegation for efficiency
--   Accessible buttons with `aria-label`
+-   Multiple color tiles representing different palettes (light & dark)
+-   Instant background color updates on click
+-   Automatic adjustment of text color for contrast
+-   Event delegation for efficient event handling
+-   Accessible buttons with `aria-label` attributes
 
 ### 🧩 Tech Stack
 
@@ -66,7 +77,7 @@ An interactive web app that changes the background color based on the tile you c
 -   **CSS3**
 -   **Vanilla JavaScript (ES6)**
 
-### ⚙️ How to Run
+### ▶️ How to Run
 
 ```bash
 cd 02. color-changer
@@ -79,13 +90,13 @@ open index.html
 
 A live digital clock displaying the current time, AM/PM indicator, date, and weekday.
 
-### 🚀 Features
+### ✨ Features
 
--   Real-time updates every second
+-   Real-time updates using `setInterval`
 -   12-hour format with AM/PM
--   Displays date and day
--   Centered, minimal layout
--   Easy to read and responsive
+-   Shows full date and day of the week
+-   Centered, minimal, and responsive layout
+-   Easy-to-read typography and spacing
 
 ### 🧩 Tech Stack
 
@@ -93,7 +104,7 @@ A live digital clock displaying the current time, AM/PM indicator, date, and wee
 -   **CSS3**
 -   **Vanilla JavaScript (ES6)**
 
-### ⚙️ How to Run
+### ▶️ How to Run
 
 ```bash
 cd 03. digital-clock
@@ -104,16 +115,16 @@ open index.html
 
 ## 🔢 4. Guess Number
 
-A fun number-guessing game where players have 10 tries to guess a randomly generated number between 0 and 100.
+A fun number-guessing game where players have limited tries to guess a randomly generated number between 0 and 100.
 
-### 🚀 Features
+### ✨ Features
 
--   Random number generation
--   Validates range (0–100)
--   Feedback on each guess (Too high / Too low)
--   Shows remaining tries and previous guesses
--   Dynamic reset button
--   Accessible alerts with `aria-live="polite"`
+-   Random number generation using `Math.random()`
+-   Input validation for range (0–100)
+-   Feedback messaging: “Too high”, “Too low”, or “Correct”
+-   Displays remaining attempts and previously guessed numbers
+-   Dynamic reset button to start a new game
+-   Accessible status messages using `aria-live="polite"`
 
 ### 🧩 Tech Stack
 
@@ -121,7 +132,7 @@ A fun number-guessing game where players have 10 tries to guess a randomly gener
 -   **CSS3**
 -   **Vanilla JavaScript (ES6)**
 
-### ⚙️ How to Run
+### ▶️ How to Run
 
 ```bash
 cd 04. guess-number
@@ -134,13 +145,14 @@ open index.html
 
 A typing reflex game that shows a random letter — the player must press the matching key on their keyboard.
 
-### 🚀 Features
+### ✨ Features
 
--   Random letter generation (A–Z)
--   Detects and validates keyboard input
--   Background flashes green/red for feedback
--   Ignores non-letter keys
--   Clean circular UI
+-   Random letter generation from A–Z
+-   Listens to keyboard events with `keydown`
+-   Validates key input against the displayed character
+-   Visual feedback (e.g. background flashes) for correct/incorrect keys
+-   Ignores non-letter keys for cleaner gameplay
+-   Simple, centered circular UI
 
 ### 🧩 Tech Stack
 
@@ -148,7 +160,7 @@ A typing reflex game that shows a random letter — the player must press the ma
 -   **CSS3**
 -   **Vanilla JavaScript (ES6)**
 
-### ⚙️ How to Run
+### ▶️ How to Run
 
 ```bash
 cd 05. key-matcher
@@ -159,15 +171,16 @@ open index.html
 
 ## ✊📄✂️ 6. Rock Paper Scissors
 
-Play the classic Rock–Paper–Scissors game against the computer.
+Play the classic Rock–Paper–Scissors game against the computer in a clean, emoji‑based UI.
 
-### 🚀 Features
+### ✨ Features
 
--   User and computer choices displayed
--   Random computer selection
--   Displays winner or tie result
--   Automatically resets after each round
--   Modern dark theme with emojis
+-   Player selects Rock, Paper, or Scissors via buttons
+-   Computer choice generated randomly
+-   Displays choices and final result (Win / Lose / Tie)
+-   Automatically resets state after each round
+-   Modern dark theme with emoji icons
+-   Simple game logic that’s easy to read and extend
 
 ### 🧩 Tech Stack
 
@@ -175,7 +188,7 @@ Play the classic Rock–Paper–Scissors game against the computer.
 -   **CSS3**
 -   **Vanilla JavaScript (ES6)**
 
-### ⚙️ How to Run
+### ▶️ How to Run
 
 ```bash
 cd 06. rock-paper-scissor
@@ -186,15 +199,16 @@ open index.html
 
 ## 🎲 7. Roll Dice Game
 
-A two-player dice game. Each player rolls once; the higher number wins.
+A two-player dice game where each player rolls once; the higher number wins.
 
-### 🚀 Features
+### ✨ Features
 
 -   Random dice roll (1–6) for each player
--   Displays roll results and declares winner
--   Handles ties properly
--   Disables buttons after rolling
--   Simple, responsive UI
+-   Displays both dice values on the screen
+-   Automatically determines and displays the winner
+-   Handles tie conditions gracefully
+-   Disables roll buttons after the round to prevent re-rolling
+-   Simple, responsive layout for desktop and mobile
 
 ### 🧩 Tech Stack
 
@@ -202,7 +216,7 @@ A two-player dice game. Each player rolls once; the higher number wins.
 -   **CSS3**
 -   **Vanilla JavaScript (ES6)**
 
-### ⚙️ How to Run
+### ▶️ How to Run
 
 ```bash
 cd 07. roll-dice-game
@@ -215,14 +229,14 @@ open index.html
 
 A timed clicking game where moles (emojis) appear randomly in a 3×3 grid. Players click them to score before time runs out.
 
-### 🚀 Features
+### ✨ Features
 
--   3×3 grid with random mole spawns
--   30-second timer
--   Live score tracking
--   Start button disabled during gameplay
--   Visual effects for active holes
--   Responsive grid design
+-   3×3 grid with random mole spawns using intervals
+-   Configurable game duration (e.g., 30 seconds)
+-   Live score tracking and display
+-   Start button disabled during an active game
+-   Visual indication for active “mole” cells
+-   Responsive grid using CSS for different screen sizes
 
 ### 🧩 Tech Stack
 
@@ -230,7 +244,7 @@ A timed clicking game where moles (emojis) appear randomly in a 3×3 grid. Playe
 -   **CSS3**
 -   **Vanilla JavaScript (ES6)**
 
-### ⚙️ How to Run
+### ▶️ How to Run
 
 ```bash
 cd 08. whack-a-mole
@@ -241,175 +255,83 @@ open index.html
 
 ## 📟 9. Modular JavaScript Calculator
 
-A **fully modular, vanilla JavaScript calculator** built without using `eval()`.
-This calculator separates **UI, input validation, arithmetic operations, and evaluation** into ES Modules for clean, maintainable, and scalable code.
+A **fully modular, vanilla JavaScript calculator** built without using `eval()`.  
+The calculator separates **UI**, **validation**, **arithmetic**, and **evaluation** across ES Modules for clean, maintainable code.
 
----
+### ✨ Features
 
-### 🚀 Features
+-   Supports basic arithmetic: `+`, `-`, `*`, `/`, `%`
+-   Handles multi-digit and decimal numbers
+-   Includes AC (All Clear) and DEL (Delete last digit)
+-   Prevents invalid input (e.g., consecutive operators)
+-   Implements custom expression evaluation logic (no `eval()`)
+-   Clean, grid-based button layout for usability
 
--   Basic arithmetic: `+`, `-`, `*`, `/`, `%`
--   Multi-digit and decimal numbers
--   AC (All Clear) and DEL (Delete last digit)
--   Fully modular architecture with ES Modules
--   Clean UI with grid layout
--   Input validation for operators and numbers
--   Safe arithmetic evaluation without `eval()`
+### 🧩 Tech Stack
 
----
+-   **HTML5**
+-   **CSS3**
+-   **Vanilla JavaScript (ES6 Modules)**
 
 ### 📁 Project Structure
 
-````
-calculator/
+```text
+09. calculator/
 │
 ├── index.html
 ├── style.css
-├── app.js                    ← Main Controller
-├── modules/
-│   ├── arithmetic-operations.js   ← Arithmetic functions (+, -, *, /, %)
-│   ├── validators.js             ← Input validation and checks
-│   ├── display.js                ← Updates screen display
-│   ├── grouper.js                ← Groups numbers and operators
-│   └── evaluator.js              ← Calculates final result
-
----
-
----
-
-## 🧠 How It Works
-
-### 1️⃣ HTML & CSS
-- `index.html` defines the **display** and **calculator buttons**.
-- `style.css` provides a modern dark UI with hover and active effects.
-- The layout uses **CSS Grid** for buttons and a responsive display.
-
----
-
-### 2️⃣ Modular JS Design
-
-#### a) app.js
-- Handles all **button click events**
-- Stores raw input keys in an array
-- Calls **validators**, **grouper**, **display updater**, and **evaluator**
-
-#### b) validators.js
-- Checks if a key is a **number** or **operator**
-- Checks if a key is a **special key** (`AC`, `DEL`, `=`)
-- Ensures **input is valid**, e.g., no consecutive operators
-
-#### c) arithmetic-operations.js
-- Performs basic math operations:
-```js
-addition(a, b), subtract(a, b), multiply(a, b), division(a, b), percentage(a, b)
-
-#### d) grouper.js
-
--   Converts raw key entries like `['1','2','+','3']` → grouped tokens `['12','+','3']`
--   Handles **multi-digit numbers** and **decimals**
-
-#### e) evaluator.js
-
--   Processes grouped tokens
--   Computes final result safely **without eval()**
--   Returns the numeric result for display
-
-#### f) display.js
-
--   Updates the calculator screen (`#display`)
--   Handles AC, DEL, and normal key appending
-
----
-
-### 3️⃣ Example Flow
-
-User clicks:
-
+├── app.js                    ← Main controller
+└── modules/
+    ├── arithmetic-operations.js   ← Arithmetic functions (+, -, *, /, %)
+    ├── validators.js              ← Input validation rules
+    ├── display.js                 ← Screen updates and formatting
+    ├── grouper.js                 ← Groups raw input into tokens
+    └── evaluator.js               ← Safely computes final result
 ```
-1 → 2 → + → 3 → =
-```
-````
 
-Processing:
+### ▶️ How to Run
 
-1. **app.js** collects entries → `['1', '2', '+', '3']`
-2. **grouper.js** combines digits → `['12', '+', '3']`
-3. **evaluator.js** computes → `12 + 3 = 15`
-4. **display.js** updates screen → shows `15`
-
----
-
-### 🖥️ How to Run
-
-1. Make sure your project files are structured as shown above.
-2. Open `index.html` in any modern browser.
-3. Or run via **VS Code Live Server** for instant reloads.
-4. Make sure the `<script>` tag uses `type="module"`:
-
-```html
-<script type="module" src="app.js"></script>
+```bash
+cd 09. calculator
+open index.html
 ```
 
 ---
 
 ## 📜 10. Scroll like Next.js
 
-This project demonstrates a simple *#*Scroll like Next.js\*\* using HTML, CSS, and JavaScript.  
-The indicator shows the user's scroll progress at the top of the page — commonly seen in blogs, documentation sites, and long-content websites.
+This project demonstrates a simple scroll progress indicator inspired by the experience seen on blogs and documentation sites.
 
-### 📌 Features
+### ✨ Features
 
--   A thin progress bar at the top of the page that fills as the user scrolls.
--   Smooth progress animation.
--   Works on all screen sizes.
--   Simple and lightweight (no libraries required).
+-   Thin progress bar fixed at the top of the page
+-   Progress fills based on scroll depth
+-   Smooth width transition for a polished feel
+-   Works across different content heights and screen sizes
+-   Lightweight: no external libraries
+
+### 🧩 Tech Stack
+
+-   **HTML5**
+-   **CSS3**
+-   **Vanilla JavaScript (ES6)**
 
 ### 📂 Project Structure
 
-```
-project-folder/
+```text
+10. scroll-like-Next.js/
 │
 ├── index.html      # Main HTML structure
-├── style.css       # Styles for layout and progress bar
+├── style.css       # Layout and progress bar styling
 └── script.js       # Logic to update progress bar on scroll
 ```
 
-### 🧱 How It Works
+### ▶️ How to Run
 
-#### 1. HTML
-
--   Contains a `#progress-bar` div at the top.
--   Multiple `<section>` elements with large paragraphs to create scrollable content.
-
-#### 2. CSS
-
--   `#progress-bar` is positioned at the top using `position: fixed;`.
--   Width of the bar changes dynamically based on scroll position.
-
-#### 3. JavaScript
-
--   Calculates scroll percentage using:
-
+```bash
+cd 10. scroll-like-Next.js
+open index.html
 ```
-scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
-```
-
--   Updates the progress bar width:
-
-```js
-progressBar.style.width = scrolled + "%";
-```
-
-### ▶️ Usage
-
-1. Download or clone the repo.
-2. Open `index.html` in a browser.
-3. Scroll the page to see the scroll indicator update.
-
-### 💡 Notes
-
--   Customize the progress bar color or thickness in `style.css`.
--   Useful for blogs, documentation, and long article pages.
 
 ---
 
@@ -417,43 +339,80 @@ progressBar.style.width = scrolled + "%";
 
 An interactive project where users can click anywhere on the screen to create animated circles that appear, grow, and fade out.
 
-### 📌 Features
+### ✨ Features
 
--   Creates a circle at the click position
--   Smooth grow and fade-out animation
--   Random colors for each circle
--   Circles do not block clicks
--   Lightweight and easy to extend
+-   Listens for global click events
+-   Creates circles at the exact click position
+-   Smooth scale and opacity transitions for each circle
+-   Random color generation for visual variety
+-   Circles are non-blocking and automatically removed from the DOM
+-   Lightweight and easy to customize
 
 ### 🧩 Tech Stack
 
--   HTML5
--   CSS3
--   Vanilla JavaScript (ES6)
+-   **HTML5**
+-   **CSS3**
+-   **Vanilla JavaScript (ES6)**
 
 ### 📂 Project Structure
 
-```
+```text
 11. mouse-circle/
 │
-├── index.html # Main HTML structure
-├── style.css # Styles for body, circle, and animation
-└── script.js # Logic to create and animate circles on click
-
+├── index.html   # Root structure
+├── style.css    # Body, circle styling, animation
+└── script.js    # Click handler and circle lifecycle
 ```
 
-### 🧱 How It Works
+### ▶️ How to Run
 
-1. HTML contains a <p> instruction.
-2. CSS styles the circle and adds transition effects.
-3. JavaScript listens for `click` events, creates a `<div>` at the mouse position, assigns a random color, triggers the grow/fade animation, and removes the circle after animation completes.
+```bash
+cd 11. mouse-circle
+open index.html
+```
+
+---
+
+## 😀 12. Random Emoji
+
+A playful hover interaction where users move the mouse over a large emoji to randomly swap it with another one. On hover, the emoji scales up and becomes colorful.
+
+### ✨ Features
+
+-   Large emoji centered on the viewport
+-   Hovering swaps the current emoji with a random one from a predefined list
+-   Smooth scale-up animation on hover for a tactile feel
+-   Grayscale effect by default, full color on hover
+-   Pure CSS transitions and simple JS logic
+
+### 🧩 Tech Stack
+
+-   **HTML5**
+-   **CSS3**
+-   **Vanilla JavaScript (ES6)**
+
+### 📂 Project Structure
+
+```text
+12. random-emoji/
+│
+├── index.html   # Structure and emoji container
+├── style.css    # Layout, grayscale, transitions
+└── script.js    # Random emoji selection and hover handler
+```
+
+### ▶️ How to Run
+
+```bash
+cd 12. random-emoji
+open index.html
+```
 
 ---
 
 ## 🗂️ Projects Structure
 
-```
-
+```text
 .
 ├── 01. bmi-calculator/
 ├── 02. color-changer/
@@ -462,17 +421,29 @@ An interactive project where users can click anywhere on the screen to create an
 ├── 05. key-matcher/
 ├── 06. rock-paper-scissors/
 ├── 07. roll-dice-game/
-└── 08. whack-a-mole/
-└── 09. calculator/
-└── 10. scroll-like-Next.js/
-└── 11. mouse-circle/
-
+├── 08. whack-a-mole/
+├── 09. calculator/
+├── 10. scroll-like-Next.js/
+├── 11. mouse-circle/
+└── 12. random-emoji/
 ```
 
 ---
 
-## 🧠 Author
+## 👤 Author
 
-**Abdul Manan**
-Web Developer | JavaScript Enthusiast
-📧 mananabdul3142@gmail.com
+**Abdul Manan**  
+Web Developer | JavaScript Enthusiast  
+📧 **mananabdul3142@gmail.com**
+
+---
+
+## ⭐ Support
+
+If this repository helped you or you like the projects:
+
+-   ⭐ Star this repo on GitHub
+-   🍴 Fork it and build your own versions
+-   📨 Reach out for collaboration or feedback
+
+Thank you for checking out my Vanilla JavaScript mini projects!
