@@ -13,7 +13,7 @@ Each project is intentionally crafted to be small, purposeful, and readable—id
 
 ---
 
-# 📌 Project Showcase (Re‑arranged by Difficulty)
+# 📌 Project Showcase 
 
 | #   | Project Name                     | Description                                             |
 | --- | -------------------------------- | ------------------------------------------------------- |
@@ -34,7 +34,7 @@ Each project is intentionally crafted to be small, purposeful, and readable—id
 
 ---
 
-# 🔽 Full Project Details (Ordered by Difficulty)
+# 🔽 Full Project Details 
 
 ---
 
