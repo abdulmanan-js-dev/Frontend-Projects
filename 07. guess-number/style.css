@@ -78,7 +78,7 @@ input[type="number"]::placeholder {
 .btn:hover:not(:disabled) {
     transform: translateY(-1px);
 }
-s
+
 /* Reset button (created by JS, but styled here) */
 #reset-btn {
     margin-top: 10px;
