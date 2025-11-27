@@ -12,7 +12,6 @@
                 <header class="app-header">
                     <h1 id="todo-title">Focus Tasks</h1>
                 </header>
-                <hr />
                 <nav class="filters" aria-label="Task filters">
                     <h2 class="visually-hidden">Filters</h2>
                     <div class="filter-options">
@@ -43,13 +42,48 @@
             <main class="main-content">
                 <section class="new-task">
                     <form id="new-task-form">
-                        <input
-                            type="text"
-                            autocomplete="off"
-                            placeholder="Add a task!"
-                            name="task"
-                            id="new-task-input"
-                        />
+                        <p>
+                            <label class="label-style" for="task-title"> Task Title: </label>
+                            <input
+                                type="text"
+                                autocomplete="off"
+                                placeholder="title of the task!"
+                                name="task-title"
+                                id="new-task-title"
+                                class="input-style"
+                            />
+                        </p>
+                        <p>
+                            <label class="label-style" for="task-description">
+                                Task Description:
+                            </label>
+                            <input
+                                type="text"
+                                autocomplete="off"
+                                placeholder="description of the task!"
+                                name="task-description"
+                                id="new-task-description"
+                                class="input-style"
+                            />
+                        </p>
+                        <p>
+                            <label class="label-style" for="due-date">Due Date:</label>
+                            <input
+                                type="date"
+                                name="due-date"
+                                id="task-due-date"
+                                class="input-style"
+                            />
+                        </p>
+                        <p>
+                            <label for=priority">Priority:</label>
+                            <input type="radio" name="high" id="high-priority">
+                            <label for="high">High</label>
+                            <input type="radio" name="medium" id="medium-priority">
+                            <label for="medium">Medium</label>
+                            <input type="radio" name="low" id="low-priority">
+                            <label for="low">Low</label>
+                        </p>
                         <button type="submit">Add</button>
                     </form>
                 </section>
