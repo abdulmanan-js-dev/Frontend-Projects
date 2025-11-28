@@ -1,5 +1,3 @@
-<img src="https://github.com/abdulmanan-js-dev/Frontend-Projects/blob/main/frontned.png" alt="Frontend Projects Banner" width="100%" />
-
 # 🧩 Vanilla JavaScript Mini Projects
 
 [![GitHub Stars](https://img.shields.io/github/stars/abdulmanan-js-dev/Frontend-Projects?style=flat&color=yellow)](https://github.com/abdulmanan-js-dev/Frontend-Projects)
