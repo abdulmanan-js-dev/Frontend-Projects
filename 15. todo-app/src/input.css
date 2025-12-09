@@ -33,7 +33,7 @@
                text-secondaryText
                cursor-pointer
                transition-all duration-150
-               hover:bg-activeItem hover:text-lightTextPrim hover:border-borderColor;
+               hover:bg-activeItem hover:text-primaryText hover:border-borderColor;
     }
 
     /* Active state (selected filter) */

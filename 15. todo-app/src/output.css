@@ -28,13 +28,13 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-background: #f3f4f6;
+    --color-primaryBg: #f3f4f6;
     --color-sidebarBg: #ffffff;
-    --color-lightCards: #f9fafb;
-    --color-lightTextPrim: #111827;
-    --color-lightTextSec: #6b7280;
-    --color-lightBorder: #e5e7eb;
-    --color-lightActiveItem: #eef2ff;
+    --color-primaryCardBg: #f9fafb;
+    --color-primaryText: #111827;
+    --color-secondaryText: #6b7280;
+    --color-borderColor: #e5e7eb;
+    --color-activeItem: #eef2ff;
   }
 }
 @layer base {
@@ -195,26 +195,8 @@
   .right-2 {
     right: calc(var(--spacing) * 2);
   }
-  .mt-1 {
-    margin-top: calc(var(--spacing) * 1);
-  }
-  .mb-1 {
-    margin-bottom: calc(var(--spacing) * 1);
-  }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
-  .mb-5 {
-    margin-bottom: calc(var(--spacing) * 5);
-  }
   .flex {
     display: flex;
-  }
-  .hidden {
-    display: none;
   }
   .h-screen {
     height: 100vh;
@@ -228,14 +210,8 @@
   .flex-col {
     flex-direction: column;
   }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
   .items-center {
     align-items: center;
-  }
-  .items-start {
-    align-items: flex-start;
   }
   .justify-between {
     justify-content: space-between;
@@ -243,17 +219,8 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
-  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
-  }
-  .overflow-y-auto {
-    overflow-y: auto;
-  }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
@@ -266,14 +233,14 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
-  .border-lightBorder {
-    border-color: var(--color-lightBorder);
+  .border-borderColor {
+    border-color: var(--color-borderColor);
   }
-  .bg-background {
-    background-color: var(--color-background);
+  .bg-primaryBg {
+    background-color: var(--color-primaryBg);
   }
-  .bg-lightCards {
-    background-color: var(--color-lightCards);
+  .bg-primaryCardBg {
+    background-color: var(--color-primaryCardBg);
   }
   .bg-sidebarBg {
     background-color: var(--color-sidebarBg);
@@ -284,72 +251,24 @@
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
-  }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
-  }
-  .py-4 {
-    padding-block: calc(var(--spacing) * 4);
-  }
-  .text-base {
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-  }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
-  .font-medium {
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .text-lightTextPrim {
-    color: var(--color-lightTextPrim);
-  }
-  .text-lightTextSec {
-    color: var(--color-lightTextSec);
+  .text-primaryText {
+    color: var(--color-primaryText);
   }
   .md\:w-64 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 64);
     }
   }
-  .md\:max-w-\[140px\] {
-    @media (width >= 48rem) {
-      max-width: 140px;
-    }
-  }
-  .md\:flex-row {
-    @media (width >= 48rem) {
-      flex-direction: row;
-    }
-  }
-  .md\:items-center {
-    @media (width >= 48rem) {
-      align-items: center;
-    }
-  }
   .md\:items-stretch {
     @media (width >= 48rem) {
       align-items: stretch;
-    }
-  }
-  .md\:justify-between {
-    @media (width >= 48rem) {
-      justify-content: space-between;
     }
   }
   .md\:px-4 {
@@ -405,7 +324,7 @@
     line-height: var(--tw-leading, var(--text-sm--line-height));
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
-    color: var(--color-lightTextSec);
+    color: var(--color-secondaryText);
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
@@ -413,24 +332,24 @@
     transition-duration: 150ms;
     &:hover {
       @media (hover: hover) {
-        border-color: var(--color-lightBorder);
+        border-color: var(--color-borderColor);
       }
     }
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-lightActiveItem);
+        background-color: var(--color-activeItem);
       }
     }
     &:hover {
       @media (hover: hover) {
-        color: var(--color-lightTextPrim);
+        color: var(--color-primaryText);
       }
     }
   }
   .options[data-active="true"] {
-    border-color: var(--color-lightBorder);
-    background-color: var(--color-lightActiveItem);
-    color: var(--color-lightTextPrim);
+    border-color: var(--color-borderColor);
+    background-color: var(--color-activeItem);
+    color: var(--color-primaryText);
   }
 }
 @property --tw-border-style {
