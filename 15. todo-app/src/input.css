@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-    --color-background: #f3f4f6; /* slightly softer gray */
+    --color-primaryBg: #f3f4f6; /* slightly softer gray */
     --color-sidebarBg: #ffffff; /* clean panel */
-    --color-lightCards: #f9fafb;
-    --color-lightTextPrim: #111827;
-    --color-lightTextSec: #6b7280;
-    --color-lightAccentBtn: #4f46e5; /* primary accent (for other UI) */
-    --color-lightBorder: #e5e7eb;
-    --color-lightActiveItem: #eef2ff; /* soft indigo highlight */
+    --color-primaryCardBg: #f9fafb;
+    --color-primaryText: #111827;
+    --color-secondaryText: #6b7280;
+    --color-borderColor: #e5e7eb;
+    --color-activeItem: #eef2ff; /* soft indigo highlight */
 }
 
 @layer components {
@@ -31,15 +30,14 @@
                text-sm font-medium
                border border-transparent
                bg-transparent
-               text-lightTextSec
+               text-secondaryText
                cursor-pointer
                transition-all duration-150
-               hover:bg-lightActiveItem hover:text-lightTextPrim hover:border-lightBorder;
+               hover:bg-activeItem hover:text-lightTextPrim hover:border-borderColor;
     }
 
     /* Active state (selected filter) */
     .options[data-active="true"] {
-        @apply bg-lightActiveItem text-lightTextPrim border-lightBorder;
+        @apply bg-activeItem text-primaryText border-borderColor;
     }
-    
 }
