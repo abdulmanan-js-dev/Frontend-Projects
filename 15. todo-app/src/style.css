@@ -1,3 +1,17 @@
+/* Use Inter as the main font */
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+}
+
+/* Visually hidden but accessible text (for labels) */
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
